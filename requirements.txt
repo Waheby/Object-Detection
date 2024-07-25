@@ -1,0 +1,6 @@
+cloudinary==1.40.0
+Flask==3.0.3
+Flask_Cors==4.0.1
+python-dotenv==1.0.1
+ultralytics==8.2.62
+waitress==3.0.0
