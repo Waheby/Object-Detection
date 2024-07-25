@@ -1,0 +1,13 @@
+names:
+  - seal
+  - signature
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: signature-detector-h6ine
+  url: https://universe.roboflow.com/experienceexchange/signature-detector-h6ine/dataset/2
+  version: 2
+  workspace: experienceexchange
+test: ../test/images
+train: Signature-Detector-2/train/images
+val: Signature-Detector-2/valid/images
