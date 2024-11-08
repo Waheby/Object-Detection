@@ -60,7 +60,7 @@ def detect_certificate_objects():
                 print("Invalid Cert")
                 prediction = False
         
-        return jsonify({'yoloPrediction': prediction, 'url': url})
+        return jsonify({'yoloPrediction': prediction, 'url': url if url != None else 'null'})
     
     except Exception as e:
         return jsonify({'error': str(e)})
