@@ -51,7 +51,7 @@ def detect_certificate_objects():
                 cloudinary.uploader.destroy("result")
                 print("Uploading...")
                 response = cloudinary.uploader.upload("result.jpg", public_id="result", unique_filename = False, overwrite=True, invalidate=True)
-                url = response['url']
+                url = response['url'] if response['url'] != None else "null"
 
             if boxes:
                 print("Valid Cert")
