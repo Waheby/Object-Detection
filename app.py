@@ -35,7 +35,7 @@ def detect_certificate_objects():
         print(data['data'])
         print(data['is_export'])
         prediction = False
-
+        url = None
         # Load my newly created model
         model = YOLO("best.pt") 
 
@@ -51,7 +51,7 @@ def detect_certificate_objects():
                 cloudinary.uploader.destroy("result")
                 print("Uploading...")
                 response = cloudinary.uploader.upload("result.jpg", public_id="result", unique_filename = False, overwrite=True, invalidate=True)
-                url = response['url'] if response['url'] != None else "null"
+                url = response['url']
 
             if boxes:
                 print("Valid Cert")
