@@ -35,7 +35,7 @@ def detect_certificate_objects():
         print(data['data'])
         print(data['is_export'])
         prediction = False
-        url = None
+        url = 'null'
         # Load my newly created model
         model = YOLO("best.pt") 
 
@@ -60,7 +60,7 @@ def detect_certificate_objects():
                 print("Invalid Cert")
                 prediction = False
         
-        return jsonify({'yoloPrediction': prediction, 'url': url if url != None else 'null'})
+        return jsonify({'yoloPrediction': prediction, 'url': url })
     
     except Exception as e:
         return jsonify({'error': str(e)})
