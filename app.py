@@ -33,7 +33,7 @@ def detect_certificate_objects():
         # Receive Data from Frontend API Request
         data = request.get_json()
         print(data['data'])
-        print(data['is_export'])
+        # print(data['is_export'])
         prediction = False
 
         # Load my newly created model
