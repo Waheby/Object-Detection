@@ -46,12 +46,12 @@ def detect_certificate_objects():
         for result in results:
             boxes = result.boxes  # Boxes object for bounding box outputs
 
-            # if data['is_export'] == "True":
-            #     result.save(filename="result.jpg")  # save to disk
-            #     cloudinary.uploader.destroy("result")
-            #     print("Uploading...")
-            #     response = cloudinary.uploader.upload("result.jpg", public_id="result", unique_filename = False, overwrite=True, invalidate=True)
-            #     url = response['url']
+            if data['is_export'] == "True":
+                result.save(filename="result.jpg")  # save to disk
+                cloudinary.uploader.destroy("result")
+                print("Uploading...")
+                response = cloudinary.uploader.upload("result.jpg", public_id="result", unique_filename = False, overwrite=True, invalidate=True)
+                url = response['url']
 
             if boxes:
                 print("Valid Cert")
